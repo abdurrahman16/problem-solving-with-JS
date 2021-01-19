@@ -41,16 +41,37 @@
 // }
 // console.log(fibonacci(12));
 
+//recursive way
+
+// function fibonacci(n){
+//     if (n==0){
+//         return 0;
+//     }
+//     if (n==1){
+//         return 1;
+//     }
+//     else{
+//         return fibonacci(n-1)+ fibonacci(n-2);
+//     }
+// }
+// console.log(fibonacci(10));
+
+
+// fibonacci series recursive
+
 function fibonacci(n){
     if (n==0){
         return 0;
     }
-    if (n==1){
-        return 1;
+    else if (n==1){
+        return [0,1];
     }
-    else{
-        return fibonacci(n-1)+ fibonacci(n-2);
+    else {
+        var fibo= fibonacci(n-1);
+        var nextfibo= fibo[n-1]+fibo[n-2];
+        fibo.push(nextfibo);
+        return fibo;
     }
+
 }
 console.log(fibonacci(10));
-
