@@ -59,19 +59,51 @@
 
 // fibonacci series recursive
 
-function fibonacci(n){
-    if (n==0){
-        return 0;
-    }
-    else if (n==1){
-        return [0,1];
-    }
-    else {
-        var fibo= fibonacci(n-1);
-        var nextfibo= fibo[n-1]+fibo[n-2];
-        fibo.push(nextfibo);
-        return fibo;
-    }
+// function fibonacci(n){
+//     if (n==0){
+//         return 0;
+//     }
+//     else if (n==1){
+//         return [0,1];
+//     }
+//     else {
+//         var fibo= fibonacci(n-1);
+//         var nextfibo= fibo[n-1]+fibo[n-2];
+//         fibo.push(nextfibo);
+//         return fibo;
+//     }
 
+// }
+// console.log(fibonacci(10));
+
+
+
+//prime number program
+
+
+
+// let n= 12;
+// for (i=2; i<n-1 ; i++)
+// {
+//     if ( n%i ==0 )
+//     {
+//         console.log('NP');
+//         break;
+//     }
+//     else {
+//         console.log('Prime')
+//     }
+// }
+
+function prime(n){
+    for(let i=2; i<n/2; i++)
+    {
+        if(n%i==0){
+            return 'NP' ; 
+        }
+    }
+    console.log('prime');
 }
-console.log(fibonacci(10));
+
+console.log(prime(17));
+
